@@ -6,7 +6,7 @@ const defaultSettings = {
    hoverColour: '#045f39'
 };
 
-const SettingsContext = React.createContext<ISettings>({settings:defaultSettings, saveSettings:null});
+const SettingsContext = React.createContext<ISettings>({settings: defaultSettings, saveSettings:null});
 
 interface ISettings {
    settings: any

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Links from './components/Links/Links';
 import { Profile } from './components/Profile/Profile';
@@ -16,17 +16,26 @@ const profile = {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const { saveSettings } = useSettings();
 
   useEffect(() => {
     saveSettings({...profile.theme});
+    setLoading(false);
     
-  }, [])
+  }, []);
+  
 
   return (
     <div className="container">
-     <Profile profile={profile} />
-     <Links />
+      {
+        loading ? <div>Loading...</div> 
+        :
+        <>
+          <Profile profile={profile} />
+          <Links />
+        </>
+      }
     </div>
   );
 }

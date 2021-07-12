@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Links from './components/Links/Links';
 import { Profile } from './components/Profile/Profile';
+import useSettings from './hooks/useSettings';
 
 
 const profile = {
@@ -15,6 +16,13 @@ const profile = {
 }
 
 function App() {
+  const { saveSettings } = useSettings();
+
+  useEffect(() => {
+    saveSettings({...profile.theme});
+    
+  }, [])
+
   return (
     <div>
      <Profile profile={profile} />

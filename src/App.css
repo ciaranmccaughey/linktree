@@ -1,5 +1,5 @@
 .link {
-  background-color: #39E09B; /* Green */
+   /* background-color: #39E09B;  */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -15,7 +15,7 @@
 }
 
 .music-link {
-  background-color: #ececec; /* Green */
+  background-color: #ececec; 
   border: none;
   color: #263238;
   max-width: 50%;

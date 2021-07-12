@@ -21,8 +21,8 @@ export const LinkItem: FC<ILinkItem> = ({ link, onLinkClicked, showMusic, showSh
             <div className="link" onClick={onLinkClicked} style={{backgroundColor: btnColour}} onMouseEnter={() => setBtnColour(settings.hoverColour)} onMouseLeave={() => setBtnColour(settings.primaryColour)}>
                 {link.title}  
             </div>
-            {showMusic && link.platforms && link.platforms.map((platform:any) => <MusicItem platform={platform} />)}
-            {showShows && link.shows && link.shows.map((show:any) => <ShowItem show={show} />)}
+            {showMusic && link.platforms && link.platforms.map((platform:any) => <MusicItem key={platform.name} platform={platform} />)}
+            {showShows && link.shows && link.shows.map((show:any) => <ShowItem key={show.date} show={show} />)}
         </>
     )
 }

@@ -17,7 +17,7 @@ export interface IShow {
 }
 
 export interface IPlatform {
-    icon: string;
+    icon: any;
     name: string;
     url: string;
 }

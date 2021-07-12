@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className="container">
      <Profile profile={profile} />
      <Links />
     </div>

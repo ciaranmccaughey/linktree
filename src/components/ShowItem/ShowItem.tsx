@@ -7,10 +7,10 @@ interface IShowItem {
 const ShowItem: FC<IShowItem> = ({ show }) => {
     return (
         <div className="music-link" >
-            <p style={{fontSize: '12px'}}>
+            <p style={{fontWeight: 600, margin: 0}}>
                 {show.date}  
             </p>
-            <p style={{fontSize: '10px'}}>
+            <p style={{fontWeight: 400, margin: 0, fontSize: '11px'}}>
                 {show.venue}
             </p>
         </div>

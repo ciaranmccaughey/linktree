@@ -7,12 +7,19 @@ interface IShowItem {
 const ShowItem: FC<IShowItem> = ({ show }) => {
     return (
         <div className="music-link" >
-            <p style={{fontWeight: 600, margin: 0}}>
-                {show.date}  
-            </p>
-            <p style={{fontWeight: 400, margin: 0, fontSize: '11px'}}>
-                {show.venue}
-            </p>
+            <div >
+                <div style={{fontWeight: 600, margin: 0}}>
+                    {show.date}  
+                </div>
+                <div style={{fontWeight: 400, margin: 0, fontSize: '11px'}}>
+                    {show.venue}
+                </div>
+            </div>
+
+            <div style={{fontWeight: 400, margin: 0, fontSize: '11px'}}>
+                {show.ticketsAvailable ? 'Buy Tickets' : 'Sold Out' }
+            </div>
+
         </div>
     )
 }

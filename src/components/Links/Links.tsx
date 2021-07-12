@@ -18,7 +18,7 @@ const links = [
     {url: '', title: 'Australia Tour', type: LinkTypes.show,
         shows: [
             {venue: 'Fortitude Music Hall', city: 'Brisbane', date: 'Aug 01, 2021', url: '', ticketsAvailable: true},
-            {venue: 'The Night Cat', city: 'Melbourne', date: 'Aug 01, 2021', url: '', ticketsAvailable: true},
+            {venue: 'The Night Cat', city: 'Melbourne', date: 'Aug 01, 2021', url: '', ticketsAvailable: false},
             {venue: 'Factory Theatre', city: 'Sydney', date: 'Aug 01, 2021', url: '', ticketsAvailable: true}
         ]
     },

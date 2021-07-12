@@ -3,12 +3,13 @@ import { IShow } from '../../shared/interfaces'
 
 // TODO: add a ShowItem css and move these styles to this file
 interface IShowItem {
-    show: IShow
+    show: IShow;
+    onSecondaryLinkClicked(show: any): void
 }
 
-const ShowItem: FC<IShowItem> = ({ show }) => {
+const ShowItem: FC<IShowItem> = ({ show , onSecondaryLinkClicked }) => {
     return (
-        <div data-testid="show-element" className="music-link" >
+        <div data-testid="show-element" className="music-link" onClick={() => onSecondaryLinkClicked(show)} >
             <div >
                 <div style={{fontWeight: 600, margin: 0}}>
                     {show.date}  

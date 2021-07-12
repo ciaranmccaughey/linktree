@@ -2,21 +2,14 @@ import React, { FC } from 'react'
 import { IPlatform } from '../../shared/interfaces'
 
 interface IMusicItem {
-    platform: IPlatform
+    platform: IPlatform;
+    onSecondaryLinkClicked(platform: any): void;
 }
 
-const MusicItem: FC<IMusicItem> = ({ platform }) => {
-
-    const onLinkClicked = () => {
-        // open link in new tab
-        const myWindow = window.open(platform.url, '_blank');
-        if (myWindow) {
-            myWindow.focus();
-        }
-    }
+const MusicItem: FC<IMusicItem> = ({ platform, onSecondaryLinkClicked }) => {
     
     return (
-        <div className="music-link" onClick={() => onLinkClicked()}>
+        <div className="music-link" onClick={() => onSecondaryLinkClicked(platform)}>
             <platform.icon style={{width: "20px"}} />
             {platform.name}
         </div>

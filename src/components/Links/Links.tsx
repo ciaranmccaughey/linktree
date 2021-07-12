@@ -13,15 +13,15 @@ const links = [
         song: {artist: 'Kings Of Leon', name: 'Milk'},
         platforms: [
             {icon: SpotifyIcon, name: 'Spotify', url: 'https://open.spotify.com/track/6DDRD4QGsEsA9YaIQzm4BO'},
-            {icon: AppleIcon, name: 'Apple', url: ''},
+            {icon: AppleIcon, name: 'Apple', url: 'https://music.apple.com/us/album/aha-shake-heartbreak/1482424654'},
             {icon: SoundCloudIcon, name: 'SoundCloud', url: ''}
         ]
     },
     {url: '1234', title: 'Australia Tour', type: LinkTypes.show,
         shows: [
-            {venue: 'Fortitude Music Hall', city: 'Brisbane', date: 'Aug 01, 2021', url: 'https://www.ticketmaster.com.au/kings-of-leon-tickets/artist/862453', ticketsAvailable: true},
-            {venue: 'The Night Cat', city: 'Melbourne', date: 'Aug 02, 2021', url: '', ticketsAvailable: false},
-            {venue: 'Factory Theatre', city: 'Sydney', date: 'Aug 03, 2021', url: '', ticketsAvailable: true}
+            {venue: 'Fortitude Music Hall', city: 'Brisbane', date: 'Aug 01, 2021', url: 'https://www.songkick.com/artists/2847-kings-of-leon', ticketsAvailable: true},
+            {venue: 'The Night Cat', city: 'Melbourne', date: 'Aug 02, 2021', url: 'https://www.songkick.com/artists/2847-kings-of-leon', ticketsAvailable: false},
+            {venue: 'Factory Theatre', city: 'Sydney', date: 'Aug 03, 2021', url: 'https://www.songkick.com/artists/2847-kings-of-leon', ticketsAvailable: true}
         ]
     },
 ]

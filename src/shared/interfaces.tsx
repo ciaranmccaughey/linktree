@@ -30,3 +30,10 @@ export interface ILink {
     platforms?: IPlatform[];
     shows?: any[];
 }
+
+
+export interface IProfile {
+    username: string;
+    imgUrl: any;
+    theme: object;
+}

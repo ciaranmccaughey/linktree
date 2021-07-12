@@ -5,6 +5,7 @@ import { Profile } from './components/Profile/Profile';
 import useSettings from './hooks/useSettings';
 import logo from './assets/profile-picture.png';
 
+// mock profile data
 const profile = {
   username: 'ciaran',
   imgUrl: logo,
@@ -16,17 +17,18 @@ const profile = {
 }
 
 function App() {
+
   const [loading, setLoading] = useState(true);
   const { saveSettings } = useSettings();
 
   useEffect(() => {
     saveSettings({...profile.theme});
     setLoading(false);
-    
   }, []);
-  
+
 
   return (
+    // TODO: add background colour from profile theme to div
     <div className="container">
       {
         loading ? <div>Loading...</div> 

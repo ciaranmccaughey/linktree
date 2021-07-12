@@ -13,6 +13,14 @@ const links = [
             {name: 'SoundCloud', url: ''}
         ]
     },
+    {url: '', title: 'Australia Tour', type: 'show',
+        song: {artist: 'Kings Of Leon', name: 'Milk'},
+        shows: [
+            {venue: 'Fortitude Music Hall', city: 'Brisbane', date: 'Aug 01, 2021', url: '', ticketsAvailable: true},
+            {venue: 'The Night Cat', city: 'Melbourne', date: 'Aug 01, 2021', url: '', ticketsAvailable: true},
+            {venue: 'Factory Theatre', city: 'Sydney', date: 'Aug 01, 2021', url: '', ticketsAvailable: true}
+        ]
+    },
 ]
 
 const Links = () => {

@@ -17,6 +17,7 @@ const MusicItem: FC<IMusicItem> = ({ platform }) => {
     
     return (
         <div className="music-link" onClick={() => onLinkClicked()}>
+            <platform.icon style={{width: "20px"}} />
             {platform.name}
         </div>
     )

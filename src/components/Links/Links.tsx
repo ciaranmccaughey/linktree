@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
+import { LinkTypes } from '../../shared/interfaces'
 import { LinkItem } from '../LinkItem.tsx/LinkItem'
 
+  
 const links = [
-    {url: 'https://linktr.ee/', title: 'My First Link', type: 'link'},
-    {url: '', title: 'My Second Link', type: 'link'},
-    {url: '', title: 'My Third Link', type: 'link'},
-    {url: '', title: 'New Album', type: 'music',
+    {url: 'https://linktr.ee/', title: 'My First Link', type: LinkTypes.link},
+    {url: '', title: 'My Second Link', type: LinkTypes.link},
+    {url: '', title: 'My Third Link', type: LinkTypes.link},
+    {url: '', title: 'New Album', type: LinkTypes.music,
         song: {artist: 'Kings Of Leon', name: 'Milk'},
         platforms: [
-            {name: 'Spotify', url: ''},
-            {name: 'Apple', url: ''},
-            {name: 'SoundCloud', url: ''}
+            {icon: '', name: 'Spotify', url: ''},
+            {icon: '', name: 'Apple', url: ''},
+            {icon: '', name: 'SoundCloud', url: ''}
         ]
     },
-    {url: '', title: 'Australia Tour', type: 'show',
-        song: {artist: 'Kings Of Leon', name: 'Milk'},
+    {url: '', title: 'Australia Tour', type: LinkTypes.show,
         shows: [
             {venue: 'Fortitude Music Hall', city: 'Brisbane', date: 'Aug 01, 2021', url: '', ticketsAvailable: true},
             {venue: 'The Night Cat', city: 'Melbourne', date: 'Aug 01, 2021', url: '', ticketsAvailable: true},

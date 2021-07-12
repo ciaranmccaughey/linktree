@@ -1,7 +1,10 @@
 import React, { FC } from 'react'
+import { IShow } from '../../shared/interfaces'
+interface IShowItem {
+    show: IShow
+}
 
-const ShowItem: FC<any> = ({ show }) => {
-    console.log('show', show.show);
+const ShowItem: FC<IShowItem> = ({ show }) => {
     return (
         <div className="music-link" >
             <p style={{fontSize: '12px'}}>

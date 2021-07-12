@@ -1,9 +1,17 @@
 import React, { FC, useState } from 'react'
 import useSettings from '../../hooks/useSettings';
+import { ILink } from '../../shared/interfaces';
 import MusicItem from '../MusicItem/MusicItem';
 import ShowItem from '../ShowItem/ShowItem';
 
-export const LinkItem: FC<any> = ({ link, onLinkClicked, showMusic, showShows }) => {
+interface ILinkItem {
+    link: ILink;
+    onLinkClicked(): any;
+    showMusic: boolean;
+    showShows: boolean;
+}
+
+export const LinkItem: FC<ILinkItem> = ({ link, onLinkClicked, showMusic, showShows }) => {
 
     const { settings } = useSettings();
     const [btnColour, setBtnColour] = useState(settings.primaryColour);

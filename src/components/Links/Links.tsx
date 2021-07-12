@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LinkItem } from '../LinkItem.tsx/LinkItem'
 
 const links = [
@@ -24,9 +24,30 @@ const links = [
 ]
 
 const Links = () => {
+
+    const [showMusic, setShowMusic] = useState(false);
+    const [showShows, setShowShows] = useState(false);
+
+    const onLinkClicked = (link: any) => {
+        // basked on the link type, perform different actions
+        if (link.type === 'link') {
+            const myWindow = window.open(link.url, '_blank');
+            if (myWindow) {
+                myWindow.focus();
+            }
+        } else if(link.type === 'music') {
+            setShowMusic(!showMusic);
+            setShowShows(false);
+        } else if(link.type === 'show') {
+            setShowMusic(false);
+            setShowShows(!showShows);
+        }
+
+    }
+
     return (
         <div>
-            {links.map(link => <LinkItem link={link} />)}
+            {links.map(link => <LinkItem onLinkClicked={() => onLinkClicked(link)} link={link} showMusic={showMusic} showShows={showShows} />)}
         </div>
     )
 }
